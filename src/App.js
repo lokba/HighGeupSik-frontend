@@ -1,9 +1,9 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import GlobalStyles from './theme/GlobalStyle';
-import Theme from './theme/Theme';
-import routes from './routes';
+import Theme from 'theme/Theme';
+import routes from 'routes';
+import GlobalStyles from 'theme/GlobalStyle';
 
 const App = () => (
   <>
@@ -11,9 +11,7 @@ const App = () => (
     <ThemeProvider theme={Theme}>
       <Router>
         <Switch>
-          <Route path={routes.home} exact>
-            Hello
-          </Route>
+          <Route path={routes.home} exact></Route>
         </Switch>
       </Router>
     </ThemeProvider>
